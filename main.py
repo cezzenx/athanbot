@@ -39,22 +39,6 @@ async def prayer(ctx):
         prayer_text += "**{}**: {}\n".format(adhan.get_en_name(), adhan.readable_timing(show_date=False))
     await ctx.send("__Prayer Times for {}__\n".format(time.strftime("%A %B %d, %Y")) + prayer_text)
 
-#join command plays athan
-@client.command(pass_context = True)
-async def join(ctx):
-    await ctx.send('athan now automatically plays at athan time. you cant manually do it anymore')
-'''
-    if (ctx.author.voice): #if user is in vc, then join that vc
-        channel = ctx.message.author.voice.channel
-        print(channel)
-        print(type(channel))
-        voice = await channel.connect()
-        source = FFmpegPCMAudio("athan" + str(random.randrange(1,6,1)) + str(".mp3"))
-        player = voice.play(source, after=lambda e:client.loop.create_task(leave_channel(channel, e)))
-    else:
-        await ctx.send("ur not in vc")
-'''
-
 #auto athan joiner
 #---
     
