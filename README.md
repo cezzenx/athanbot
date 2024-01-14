@@ -16,3 +16,7 @@ The purpose of this bot is to fetch athan timings from a specific location and p
   - The *default_channel* is the channel that the bot will naturally join if there has been no recent voice chat activity, in the format of the integer of the channel id.
 
 3. In the `main.py`, the user must set their location to obtain the Athan timings for their country. A docmentation for the city and countries are found on the developers page. By default, the location is set to Calgary, Canada
+4. The prefix is set to `.` by default. This can be changed by editing the *client* variable with the wanted variable.
+
+### Usage
+**
