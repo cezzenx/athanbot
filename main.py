@@ -3,7 +3,6 @@ import aladhan
 from discord.ext import commands, tasks
 from discord import FFmpegPCMAudio
 from keys import * 
-from mcstatus import JavaServer
 import time
 import random
 
@@ -39,16 +38,6 @@ async def prayer(ctx):
     for adhan in times:
         prayer_text += "**{}**: {}\n".format(adhan.get_en_name(), adhan.readable_timing(show_date=False))
     await ctx.send("__Prayer Times for {}__\n".format(time.strftime("%A %B %d, %Y")) + prayer_text)
-
-#mc server status
-@client.command(aliases=["mc","server","online"])
-async def minecraft(ctx):
-    await ctx.send("getting status of mc server...")
-    try:
-        latency = server.ping()
-        await ctx.send("server is online, with ping of {} ms.".format(int(latency)))
-    except:
-        await ctx.send("server is offline, izaan turn on please")
 
 #join command plays athan
 @client.command(pass_context = True)
