@@ -4,9 +4,9 @@
 The purpose of this bot is to fetch athan timings from a specific location and play the athan in the most recently used voice channel.
 
 ### Modules Used
-**discord.py** - Library used for aplication creation to utilize discord API 
-**aladhan-api** - API used for getting Islamic Athan timings for any part of the world
-**FFmpeg** - Framework used for playing Athan files through discord voice channels
+- **discord.py** - Library used for aplication creation to utilize discord API
+- **aladhan-api** - API used for getting Islamic Athan timings for any part of the world
+- **FFmpeg** - Framework used for playing Athan files through discord voice channels
 
 ### How To Setup
 1. The user must firstly install the required modules. The instuctions can be found from the module developers' respective pages.
