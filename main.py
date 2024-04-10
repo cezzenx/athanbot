@@ -4,7 +4,6 @@ from discord import app_commands
 from discord.ext import commands, tasks
 from discord import FFmpegPCMAudio
 from keys import * 
-from mcstatus import JavaServer
 import datetime
 import pytz
 import random
@@ -44,15 +43,6 @@ async def athan(interaction: discord.Interaction):
     for adhan in times:
         prayer_text += "**{}**: {}\n".format(adhan.get_en_name(), adhan.readable_timing(show_date=False))
     await interaction.response.send_message("__**Prayer Times for {}**__\n".format(datetime.datetime.now(pytz.timezone('Canada/Mountain')).strftime("%A %B %d, %Y")) + prayer_text)
-
-@client.tree.command(name='minecraft')
-async def minecraft(interaction: discord.Interaction):
-    await interaction.response.send_message("getting status of mc server...")
-    try:
-        latency = server.ping()
-        await interaction.response.send_message("server is online, with ping of {} ms.".format(int(latency)))
-    except:
-        await interaction.response.send_message("server is offline, izaan turn on please")
 
 #test command
 @client.command()
